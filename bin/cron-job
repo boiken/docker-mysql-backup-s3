@@ -22,7 +22,7 @@ make_backup () {
     # exit if last command have problems
     if  [ "$?" == "0" ]; then
         echo "Backup process complete";
-        curl -X POST -H 'Content-type: application/json' --data '{"text":"Backup Finishe OK for '$FILE'"}' $SLACK_WEBHOOK
+        curl -X POST -H 'Content-type: application/json' --data '{"text":"Backup Finished for '$FILE'"}' $SLACK_WEBHOOK
     else
         echo "Error occurred in backup process. Exiting now"
         curl -X POST -H 'Content-type: application/json' --data '{"text":"Backup FAILED for '$FILE'"}' $SLACK_WEBHOOK
