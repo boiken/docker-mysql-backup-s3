@@ -52,7 +52,7 @@ docker run --rm --name mysql-backup \
   --env DB_NAME=mysql-db \
   --env BACKUP_WINDOW='0 6 * * *' \
   --env SLACK_WEBHOOK=https://hooks.slack.com/services/XXXXXXXXXXX \ 
-  fernandoneto/docker-mysql-backup-s3
+  bsdigital/docker-mysql-backup-s3
 
 ```
 
