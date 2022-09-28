@@ -1,5 +1,5 @@
 FROM cusspvz/node:0.12.9
-MAINTAINER Fernando Neto <fernando.neto@junglecloud.com>
+MAINTAINER BSDev
 
 RUN apk add --update py-pip mysql-client bash apk-cron && \
   pip install awscli && \

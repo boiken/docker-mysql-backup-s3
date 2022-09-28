@@ -32,8 +32,10 @@ container to backup and restore your mysql database's to using awscli.
 - _`$MYSQL_HOST`_ - Host where mysql is running.
 - _`$FILENAME`_ - Name to file in Azure Storage. Default name `default-date +"%Y-%m-%d_%H-%M"` output example `default-2015-08-03_17-58`
 - _`$BACKUP_WINDOW`_ - What time should backup run. you should use crontab format, so see [documentation](http://www.freebsd.org/cgi/man.cgi?crontab(5). default value every day at 6 am.
-- _`$SLACK_TOKEN`_ - Your slack token.
-- _`$SLACK_CHANNEL`_ - Slack channel to send message.
+- _`$SLACK_WEBHOOK`_ - Put the Webhook URL here
+
+- _`$SLACK_TOKEN`_ - Your slack token. **NOT WORKING!**
+- _`$SLACK_CHANNEL`_ - Slack channel to send message. **NOT WORKING!**
 
 # Example of running
 
@@ -49,8 +51,7 @@ docker run --rm --name mysql-backup \
   --env MYSQL_PASSWORD=password \
   --env DB_NAME=mysql-db \
   --env BACKUP_WINDOW='0 6 * * *' \
-  --env SLACK_TOKEN=abd5682jdj \
-  --env SLACK_CHANNEL=slack-group \  
+  --env SLACK_WEBHOOK=https://hooks.slack.com/services/XXXXXXXXXXX \ 
   fernandoneto/docker-mysql-backup-s3
 
 ```
