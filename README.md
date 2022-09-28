@@ -34,8 +34,8 @@ container to backup and restore your mysql database's to using awscli.
 - _`$BACKUP_WINDOW`_ - What time should backup run. you should use crontab format, so see [documentation](http://www.freebsd.org/cgi/man.cgi?crontab(5). default value every day at 6 am.
 - _`$SLACK_WEBHOOK`_ - Put the Webhook URL here
 
-- _`$SLACK_TOKEN`_ - Your slack token. **NOT WORKING!**
-- _`$SLACK_CHANNEL`_ - Slack channel to send message. **NOT WORKING!**
+- _ **NOT WORKING!** `$SLACK_TOKEN`_ - Your slack token. **NOT WORKING!**
+- _ **NOT WORKING!** `$SLACK_CHANNEL`_ - Slack channel to send message. **NOT WORKING!**
 
 # Example of running
 
@@ -56,10 +56,10 @@ docker run --rm --name mysql-backup \
 
 ```
 
-This will upload to Aws S3 a file named `default-2015-08-04_09-47.sql.gz`.
+This will upload to Aws S3 a file named `backup-2015-08-04_09-47.sql.gz`.
 
 ### Building image
 
 ```bash
-docker build -t fernandoneto/docker-mysql-backup-s3 .
+docker build -t bsdigital/docker-mysql-backup-s3 .
 ```
